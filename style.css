@@ -119,4 +119,38 @@ input[type="text"] {
     opacity: 1;
     transform: translateY(0);
   }
+
+.description {
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+  animation: fadeIn 1.5s ease-out;
+}
+
+.description h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #ff80ab;
+  text-align: center;
+}
+
+.description ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.description li {
+  margin-bottom: 10px;
+}
+
+.description p {
+  margin-top: 20px;
+  color: #f5f5f5;
+  text-align: center;
+　}
 }
