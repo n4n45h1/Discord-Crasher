@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let successCount = 0;
   let failedCount = 0;
 
-  // ボタンが押されたときのイベント
+  // ボタンイベント
   buttons.forEach((button) => {
     button.addEventListener('click', async () => {
       const webhookUrl = webhookInput.value.trim();
@@ -23,13 +23,24 @@ document.addEventListener('DOMContentLoaded', () => {
       failedCount = 0;
       updateStatus();
 
-      for (let i = 0; i < requests; i++) {
-        try {
-          await sendWebhook(webhookUrl);
-          successCount++;
-        } catch (error) {
-          failedCount++;
+      const batchSize = 100; // 並列リクエスト数
+      const batches = Math.ceil(requests / batchSize);
+
+      for (let batch = 0; batch < batches; batch++) {
+        const promises = [];
+        for (let i = 0; i < batchSize && batch * batchSize + i < requests; i++) {
+          promises.push(sendWebhook(webhookUrl));
         }
+
+        await Promise.allSettled(promises).then((results) => {
+          results.forEach((result) => {
+            if (result.status === 'fulfilled') {
+              successCount++;
+            } else {
+              failedCount++;
+            }
+          });
+        });
         updateStatus();
       }
     });
