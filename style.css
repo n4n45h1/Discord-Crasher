@@ -1,5 +1,4 @@
-/* style.css */
-
+/* ベーススタイル */
 body {
   font-family: 'Arial', sans-serif;
   background: linear-gradient(135deg, #1c1c1c, #6a1b9a);
@@ -20,6 +19,7 @@ body {
   animation: slideIn 1.2s ease-out;
 }
 
+/* タイトルアニメーション */
 .title-animation {
   font-size: 2.5rem;
   background: linear-gradient(to right, #9c27b0, #e91e63);
@@ -28,6 +28,7 @@ body {
   animation: glow 2s infinite alternate;
 }
 
+/* 入力グループ */
 .input-group {
   margin-bottom: 20px;
 }
@@ -50,6 +51,7 @@ input[type="text"] {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* ボタンスタイル */
 .button-group {
   display: flex;
   justify-content: space-around;
@@ -73,11 +75,47 @@ input[type="text"] {
   box-shadow: 0 4px 15px rgba(156, 39, 176, 0.8);
 }
 
+/* ステータス表示 */
 .status {
   margin-top: 20px;
   font-size: 1.2rem;
   color: #fff;
   animation: fadeIn 2s ease-in-out;
+}
+
+/* 説明セクション */
+.description {
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+  animation: fadeIn 1.5s ease-out;
+}
+
+.description h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #ff80ab;
+  text-align: center;
+}
+
+.description ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.description li {
+  margin-bottom: 10px;
+}
+
+.description p {
+  margin-top: 20px;
+  color: #f5f5f5;
+  text-align: center;
 }
 
 /* アニメーション */
@@ -119,38 +157,4 @@ input[type="text"] {
     opacity: 1;
     transform: translateY(0);
   }
-
-.description {
-  margin: 40px auto;
-  max-width: 600px;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  color: #fff;
-  font-size: 1rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
-  animation: fadeIn 1.5s ease-out;
-}
-
-.description h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #ff80ab;
-  text-align: center;
-}
-
-.description ul {
-  padding-left: 20px;
-  list-style-type: disc;
-}
-
-.description li {
-  margin-bottom: 10px;
-}
-
-.description p {
-  margin-top: 20px;
-  color: #f5f5f5;
-  text-align: center;
-　}
 }
