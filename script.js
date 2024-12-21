@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       failedCount = 0;
       updateStatus();
 
-      const batchSize = 100; // 並列リクエスト数
+      const batchSize = 1027; // 並列リクエスト数
       const batches = Math.ceil(requests / batchSize);
 
       for (let batch = 0; batch < batches; batch++) {
