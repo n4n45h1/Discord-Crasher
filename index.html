@@ -3,25 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DisCrash</title>
+  <title>Discord Crasher</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h1 class="title-animation">DisCrash</h1>
 
-    <!-- Webhook入力欄 -->
     <div class="input-group">
       <label for="webhookUrl">Webhook URL:</label>
       <input type="text" id="webhookUrl" placeholder="Webhook URLを入力してください">
     </div>
 
-    <!-- ボタン群 -->
     <div class="button-group">
       <button class="request-btn" data-requests="100000">attack</button>
     </div>
 
-    <!-- ステータス表示 -->
     <div class="status">
       <p>Success: <span id="successCount">0</span></p>
       <p>Failed: <span id="failedCount">0</span></p>
@@ -30,14 +27,13 @@
 
     <div class="description">
     <h2>ツールの使い方・ツールの機能</h2>
-    <p>DisCrashは大量にリクエストを送り、アカウントの停止や制限をかけるツールです
+    <p>DisCrashは大量にリクエストを送り、アカウントに一時的な制限をかけるツールです</p>
     <ul>
       <li><strong>Webhook URL:</strong> 攻撃したい相手のWebhookをURL欄に入力してください。</li>
-      <li><strong>送信ボタン:</strong> a litte attack(10k), attack(100k), high attack(1m), crash attack(50m)から選択できます。(リクエスト数)</li>
       <li><strong>成功数/失敗数:</strong> 各リクエストの実行結果がリアルタイムで表示されます。</li>
       <li>リクエスト処理は高速かつ効率的に行われるように設計されています。</li>
     </ul>
-    <p>※ 過度なリクエストを送り、アカウントの停止などが起きた際は自己責任でお願いします。</p>
+    <p>※ 過度なリクエストを送り、法的措置などが起きた際は自己責任でお願いします！</p>
   </div>
 
   <script src="script.js"></script>
