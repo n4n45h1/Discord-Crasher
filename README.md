@@ -13,7 +13,7 @@
 ### Discord-Crasher is a garbage tool that temporarily disables certain accounts.
 ## How it works
 You create a webhook and send a large number of requests to it. Discord-Crasher will then consider the account as spam, and place a rate limitation on the account. This temporarily disables the account.
-## Usage
+## How to use?
 1. ask the recipient to create a webhook with an appropriate reason. 
 2.Copy the url of the webhook you have them create. 
 3.Open the site [here](https://zenon-i.github.io/Discord-Crasher). 
