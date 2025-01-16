@@ -18,6 +18,6 @@ You create a webhook and send a large number of requests to it. Discord-Crasher 
 2. Copy the url of the webhook you have them create. 
 3. Open the site [here](https://zenon-i.github.io/Discord-Crasher). 
 4. Paste the webhook url you copied into the “url” field.
-5. Finally, press “attack” (the site will automatically send the request to you). (The site will automatically send the request.)
+5. Finally, press “attack” (the site will automatically send the request to you). 
 
 Translated with DeepL.com 
