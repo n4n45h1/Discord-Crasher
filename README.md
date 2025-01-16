@@ -21,3 +21,16 @@ You create a webhook and send a large number of requests to it. Discord-Crasher 
 5. Finally, press “attack” (the site will automatically send the request to you). 
 
 Translated with DeepL.com 
+
+# Discord-Crasher.
+### O Discord-Crasher é uma ferramenta inútil que desativa temporariamente determinadas contas.
+## Como funciona.
+Você cria um webhook e envia um grande número de solicitações para ele. Isso fará com que o Discord considere isso spam e coloque um limite de taxa na conta. Isso desabilita temporariamente a conta.
+## Uso.
+1. Peça à pessoa para criar um webhook com um motivo apropriado. 
+2. Copie a url do webhook que a pessoa criou. 
+3. Abra o site [aqui] (https://zenon-i.github.io/Discord-Crasher). 
+4. Cole a url do webhook que você copiou no campo url. 
+5. Pressione “attack” no final. (O site enviará a solicitação automaticamente).
+
+Traduzido com a versão gratuita do tradutor - DeepL.com
