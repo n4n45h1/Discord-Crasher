@@ -1,13 +1,7 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', () => {
   const webhookInput = document.getElementById('webhookUrl');
-  const successCountEl = document.getElementById('successCount');
-  const failedCountEl = document.getElementById('failedCount');
+  const statusMessage = document.getElementById('statusMessage');
   const buttons = document.querySelectorAll('.request-btn');
-
-  let successCount = 0;
-  let failedCount = 0;
 
   // ボタンイベント
   buttons.forEach((button) => {
@@ -19,9 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const requests = parseInt(button.getAttribute('data-requests'), 10);
-      successCount = 0;
-      failedCount = 0;
-      updateStatus();
 
       const batchSize = 100;
       const batches = Math.ceil(requests / batchSize);
@@ -35,13 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
         await Promise.allSettled(promises).then((results) => {
           results.forEach((result) => {
             if (result.status === 'fulfilled') {
-              successCount++;
+              showStatusMessage('成功しました', 'success'); // 追加
             } else {
-              failedCount++;
+              showStatusMessage('失敗しました', 'error'); // 追加
             }
           });
         });
-        updateStatus();
       }
     });
   });
@@ -59,9 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // ステータス更新
-  function updateStatus() {
-    successCountEl.textContent = successCount;
-    failedCountEl.textContent = failedCount;
+  // ステータス表示関数 追加
+  function showStatusMessage(message, type) {
+    statusMessage.textContent = message;
+    statusMessage.className = `status-message ${type}`;
+    setTimeout(() => {
+      statusMessage.textContent = '';
+      statusMessage.className = 'status-message';
+    }, 5000);
   }
 });
