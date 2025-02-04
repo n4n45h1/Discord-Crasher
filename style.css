@@ -76,11 +76,19 @@ input[type="text"] {
 }
 
 /* ステータス表示 */
-.status {
+.status-message { /* 変更 */
   margin-top: 20px;
   font-size: 1.2rem;
   color: #fff;
   animation: fadeIn 2s ease-in-out;
+}
+
+.status-message.success { /* 追加 */
+  color: #00e676;
+}
+
+.status-message.error { /* 追加 */
+  color: #ff3d00;
 }
 
 /* 説明セクション */
