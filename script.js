@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       failedCount = 0;
       updateStatus();
 
-      const batchSize = 127; // 並列リクエスト数
+      const batchSize = 100;
       const batches = Math.ceil(requests / batchSize);
 
       for (let batch = 0; batch < batches; batch++) {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const response = await fetch(webhookUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ content: 'test' }),
+      body: JSON.stringify({ content: 'https://discord-crasher.vercel.app | Developed by n4n45h1' }),
     });
 
     if (!response.ok) {
